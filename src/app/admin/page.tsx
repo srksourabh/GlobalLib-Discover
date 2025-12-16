@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { UploadCloud, CheckCircle, Terminal, Server } from 'lucide-react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { UploadCloud, CheckCircle, Terminal } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
@@ -37,7 +37,7 @@ export default function AdminPage() {
     return () => clearInterval(logInterval);
   }, []);
   
-  const logContainerRef = React.useRef<HTMLDivElement>(null);
+  const logContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (logContainerRef.current) {
