@@ -16,19 +16,7 @@ export default function Home() {
   const mood = searchParams.get('mood') || '';
 
   useEffect(() => {
-    // Fisher-Yates shuffle algorithm
-    const shuffleArray = (array: Book[]) => {
-      const newArray = [...array];
-      for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-      }
-      return newArray;
-    };
-    
-    const shuffled = shuffleArray(books);
-
-    const filtered = shuffled.filter((book) => {
+    const filtered = books.filter((book) => {
       const titleMatch = book.title.toLowerCase().includes(search);
       const authorMatch = book.author.toLowerCase().includes(search);
       const categoryMatch = category ? book.category === category : true;
