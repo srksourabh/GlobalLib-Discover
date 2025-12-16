@@ -9,10 +9,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Play, Square, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BookPage({ params: { id } }: { params: { id: string } }) {
+export default function BookPage({ params }: { params: { id: string } }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const book = books.find((b) => b.id === id);
+  const book = books.find((b) => b.id === params.id);
 
   useEffect(() => {
     // Cleanup speechSynthesis on component unmount
@@ -71,6 +71,7 @@ export default function BookPage({ params: { id } }: { params: { id: string } })
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 30vw"
                 data-ai-hint={book.imageHint}
+                priority
               />
             </div>
             <h1 className="font-headline text-3xl font-bold">

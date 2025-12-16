@@ -7,16 +7,43 @@ import { SearchFilters } from '@/components/search-filters';
 import { BookCard } from '@/components/book-card';
 import { useSearchParams } from 'next/navigation';
 
+// Function to shuffle an array
+function shuffle(array: any[]) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex !== 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
 export default function Home() {
   const searchParams = useSearchParams();
   const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
+  const [initialBooks, setInitialBooks] = useState<Book[]>([]);
 
   const search = searchParams.get('search')?.toLowerCase() || '';
   const category = searchParams.get('category') || '';
   const mood = searchParams.get('mood') || '';
 
   useEffect(() => {
-    const filtered = books.filter((book) => {
+    // Shuffle books only on the client-side after initial mount
+    setInitialBooks(shuffle([...books]));
+  }, []);
+
+  useEffect(() => {
+    const filtered = initialBooks.filter((book) => {
       const titleMatch = book.title.toLowerCase().includes(search);
       const authorMatch = book.author.toLowerCase().includes(search);
       const categoryMatch = category ? book.category === category : true;
@@ -27,7 +54,7 @@ export default function Home() {
 
     setFilteredBooks(filtered);
 
-  }, [search, category, mood]);
+  }, [search, category, mood, initialBooks]);
 
   const categories = [...new Set(books.map((book) => book.category))];
   const moodTags = [...new Set(books.flatMap((book) => book.moodTags))];

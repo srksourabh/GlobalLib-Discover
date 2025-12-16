@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import type { DragEvent } from 'react';
+import { useState, useEffect, useCallback, useRef, type DragEvent } from 'react';
 import { UploadCloud, CheckCircle, Terminal } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -25,6 +24,7 @@ export default function AdminPage() {
   const [isDragging, setIsDragging] = useState(false);
   const [isUploaded, setIsUploaded] = useState(false);
   const [logs, setLogs] = useState<string[]>(['[SYSTEM] Initializing system logs...']);
+  const logContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const logInterval = setInterval(() => {
@@ -38,7 +38,6 @@ export default function AdminPage() {
     return () => clearInterval(logInterval);
   }, []);
   
-  const logContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (logContainerRef.current) {
