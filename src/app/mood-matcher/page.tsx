@@ -4,39 +4,44 @@ import { useState } from 'react';
 import { BookCard } from '@/components/book-card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { books } from '@/lib/data';
 import type { Book } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
+import { getGeminiRecommendations } from '../actions';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
 
 export default function MoodMatcherPage() {
   const [mood, setMood] = useState('');
   const [recommendedBooks, setRecommendedBooks] = useState<Book[]>([]);
+  const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const { toast } = useToast();
 
-  const handleGetRecommendations = () => {
-    setHasSearched(true);
-    const lowerCaseMood = mood.toLowerCase();
-    let results: Book[] = [];
-
-    if (lowerCaseMood.includes('sad') || lowerCaseMood.includes('down')) {
-      results = books.filter(
-        (book) =>
-          book.moodTags.includes('Inspiring') ||
-          book.moodTags.includes('Funny') ||
-          book.moodTags.includes('Lighthearted')
-      );
-    } else if (
-      lowerCaseMood.includes('ambitious') ||
-      lowerCaseMood.includes('work')
-    ) {
-      results = books.filter((book) => book.category === 'Business');
-    } else {
-      // Return a random selection of 4 books for generic input
-      const shuffled = [...books].sort(() => 0.5 - Math.random());
-      results = shuffled.slice(0, 4);
+  const handleGetRecommendations = async () => {
+    if (!mood.trim()) {
+      toast({
+        title: 'Please describe your mood',
+        variant: 'destructive',
+      });
+      return;
     }
+    setLoading(true);
+    setHasSearched(true);
+    setRecommendedBooks([]);
 
-    setRecommendedBooks(results);
+    const result = await getGeminiRecommendations(mood);
+
+    if (result.error) {
+      toast({
+        title: 'Error getting recommendations',
+        description: result.error,
+        variant: 'destructive',
+      });
+    } else if (result.books) {
+      setRecommendedBooks(result.books);
+    }
+    
+    setLoading(false);
   };
 
   return (
@@ -56,13 +61,21 @@ export default function MoodMatcherPage() {
           rows={4}
           value={mood}
           onChange={(e) => setMood(e.target.value)}
+          disabled={loading}
         />
-        <Button onClick={handleGetRecommendations} size="lg">
-          Get AI Recommendations
+        <Button onClick={handleGetRecommendations} size="lg" disabled={loading}>
+          {loading ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Getting AI Recommendations...
+            </>
+          ) : (
+            'Get AI Recommendations'
+          )}
         </Button>
       </div>
 
-      {hasSearched && (
+      {hasSearched && !loading && (
         <div className="mt-12">
           {recommendedBooks.length > 0 ? (
             <BookGrid books={recommendedBooks} />
@@ -82,7 +95,7 @@ export default function MoodMatcherPage() {
 
 function BookGrid({ books }: { books: Book[] }) {
   return (
-    <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-4 mt-8">
+    <div className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
       {books.map((book) => (
         <div key={book.id} className="relative">
           <BookCard book={book} />
