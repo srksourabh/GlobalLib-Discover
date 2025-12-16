@@ -9,7 +9,7 @@ import { useSearchParams } from 'next/navigation';
 
 export default function Home() {
   const searchParams = useSearchParams();
-  const [shuffledBooks, setShuffledBooks] = useState<Book[]>([]);
+  const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
 
   const search = searchParams.get('search')?.toLowerCase() || '';
   const category = searchParams.get('category') || '';
@@ -25,17 +25,21 @@ export default function Home() {
       }
       return newArray;
     };
-    setShuffledBooks(shuffleArray(books));
-  }, []);
+    
+    const shuffled = shuffleArray(books);
 
-  const filteredBooks = (shuffledBooks.length > 0 ? shuffledBooks : books).filter((book) => {
-    const titleMatch = book.title.toLowerCase().includes(search);
-    const authorMatch = book.author.toLowerCase().includes(search);
-    const categoryMatch = category ? book.category === category : true;
-    const moodMatch = mood ? book.moodTags.includes(mood) : true;
+    const filtered = shuffled.filter((book) => {
+      const titleMatch = book.title.toLowerCase().includes(search);
+      const authorMatch = book.author.toLowerCase().includes(search);
+      const categoryMatch = category ? book.category === category : true;
+      const moodMatch = mood ? book.moodTags.includes(mood) : true;
 
-    return (titleMatch || authorMatch) && categoryMatch && moodMatch;
-  });
+      return (titleMatch || authorMatch) && categoryMatch && moodMatch;
+    });
+
+    setFilteredBooks(filtered);
+
+  }, [search, category, mood]);
 
   const categories = [...new Set(books.map((book) => book.category))];
   const moodTags = [...new Set(books.flatMap((book) => book.moodTags))];
