@@ -12,7 +12,7 @@ type BookCardProps = {
 
 export function BookCard({ book }: BookCardProps) {
   return (
-    <Link href={`/books/${book.id}`} className="group block">
+    <Link href={`/books/${book.id}`} className="group block h-full">
       <Card className="overflow-hidden h-full transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:-translate-y-1">
         <CardContent className="p-0">
           <div className="aspect-[2/3] relative">

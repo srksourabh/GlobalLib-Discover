@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ExternalLink, Play, Square } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Play, Square, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
 
 export default function BookPage({ params }: { params: { id: string } }) {
@@ -46,6 +46,10 @@ export default function BookPage({ params }: { params: { id: string } }) {
     setIsSpeaking(false);
   };
 
+  const handleShowSummary = () => {
+    alert(`Quick Summary:\n\n${book.description}`);
+  };
+
   return (
     <div className="container mx-auto max-w-7xl px-4 py-8">
       <Link
@@ -82,11 +86,16 @@ export default function BookPage({ params }: { params: { id: string } }) {
               ))}
             </div>
 
-            <Button asChild className="mt-6 w-full">
-              <a href={book.affiliateLink} target="_blank" rel="noopener noreferrer">
-                Buy on Amazon <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+            <div className="mt-6 space-y-2">
+                <Button onClick={handleShowSummary} className="w-full" variant="outline">
+                    <BrainCircuit className="mr-2 h-4 w-4" /> Quick Summary
+                </Button>
+                <Button asChild className="w-full">
+                  <a href={book.affiliateLink} target="_blank" rel="noopener noreferrer">
+                    Buy on Amazon <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+            </div>
           </div>
         </div>
 
