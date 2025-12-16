@@ -9,10 +9,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Play, Square, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BookPage({ params }: { params: { id: string } }) {
+export default function BookPage({ params: { id } }: { params: { id: string } }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const book = books.find((b) => b.id === params.id);
+  const book = books.find((b) => b.id === id);
 
   useEffect(() => {
     // Cleanup speechSynthesis on component unmount
