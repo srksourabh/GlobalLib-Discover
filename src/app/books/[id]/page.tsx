@@ -11,8 +11,9 @@ import Link from 'next/link';
 
 export default function BookPage({ params }: { params: { id: string } }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const { id } = params;
 
-  const book = books.find((b) => b.id === params.id);
+  const book = books.find((b) => b.id === id);
 
   useEffect(() => {
     // Cleanup speechSynthesis on component unmount
