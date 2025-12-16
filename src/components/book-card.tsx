@@ -26,7 +26,7 @@ export function BookCard({ book }: BookCardProps) {
             />
           </div>
           <div className="p-4 flex-grow flex flex-col">
-            <h3 className="font-semibold text-base leading-tight truncate group-hover:text-primary flex-grow">
+            <h3 className="font-semibold text-base leading-tight truncate group-hover:text-primary">
               {book.title}
             </h3>
             <p className="text-sm text-muted-foreground mt-1">{book.author}</p>
