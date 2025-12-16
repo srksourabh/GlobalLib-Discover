@@ -2,6 +2,11 @@ import { books } from '@/lib/data';
 import type { Book } from '@/lib/types';
 import { SearchFilters } from '@/components/search-filters';
 import { BookCard } from '@/components/book-card';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarInset,
+} from '@/components/ui/sidebar';
 
 export default function Home({
   searchParams,
