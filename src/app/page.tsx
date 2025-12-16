@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { books } from '@/lib/data';
 import type { Book } from '@/lib/types';
 import { SearchFilters } from '@/components/search-filters';
@@ -8,11 +9,26 @@ import { useSearchParams } from 'next/navigation';
 
 export default function Home() {
   const searchParams = useSearchParams();
+  const [shuffledBooks, setShuffledBooks] = useState<Book[]>([]);
+
   const search = searchParams.get('search')?.toLowerCase() || '';
   const category = searchParams.get('category') || '';
   const mood = searchParams.get('mood') || '';
 
-  const filteredBooks = books.filter((book) => {
+  useEffect(() => {
+    // Fisher-Yates shuffle algorithm
+    const shuffleArray = (array: Book[]) => {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+    };
+    setShuffledBooks(shuffleArray(books));
+  }, []);
+
+  const filteredBooks = (shuffledBooks.length > 0 ? shuffledBooks : books).filter((book) => {
     const titleMatch = book.title.toLowerCase().includes(search);
     const authorMatch = book.author.toLowerCase().includes(search);
     const categoryMatch = category ? book.category === category : true;
