@@ -14,7 +14,7 @@ export const books: Book[] = [
       'How Constant Innovation Creates Radically Successful Businesses.',
     category: 'Business',
     moodTags: ['Educational', 'Inspiring'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898',
     fullText: `A startup is a human institution designed to create a new product or service under conditions of extreme uncertainty. This is Ries's definition, and it's a good one. He argues that too many startups begin with an idea for a product that they think people want. Then they spend months, sometimes years, perfecting that product without ever showing it to the prospective customer. When they fail to reach broad uptake from customers, it's often because they never spoke to prospective customers and determined whether or not the product was interesting.`,
   },
   {
@@ -26,7 +26,7 @@ export const books: Book[] = [
     description: 'A groundbreaking narrative of humanity’s creation and evolution.',
     category: 'Self-Help',
     moodTags: ['Educational', 'Inspiring'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari/dp/0062316095',
     fullText: `One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—homo sapiens. What happened to the others? And what may happen to us? Most books about the history of humanity pursue either a historical or a biological approach, but Dr. Yuval Noah Harari breaks the mold with this highly original book that begins about 70,000 years ago with the appearance of modern cognition.`,
   },
   {
@@ -39,7 +39,7 @@ export const books: Book[] = [
       'An Easy & Proven Way to Build Good Habits & Break Bad Ones.',
     category: 'Self-Help',
     moodTags: ['Educational', 'Inspiring'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Atomic-Habits-Proven-Build-Breaks/dp/0735211299',
     fullText: `No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.`,
   },
   {
@@ -51,7 +51,7 @@ export const books: Book[] = [
     description: 'A shocking psychological thriller of a woman’s act of violence against her husband.',
     category: 'Fiction',
     moodTags: ['Suspenseful', 'Dark'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Silent-Patient-Alex-Michaelides/dp/1250301696',
     fullText: `Alicia Berenson’s life is seemingly perfect. A famous painter married to an in-demand fashion photographer, she lives in a grand house with big windows overlooking a park in one of London’s most desirable areas. One evening her husband Gabriel returns home late from a fashion shoot, and Alicia shoots him five times in the face, and then never speaks another word.`,
   },
   {
@@ -63,7 +63,7 @@ export const books: Book[] = [
     description: 'A stunning blend of adventure and mysticism, environmentalism and politics.',
     category: 'Fiction',
     moodTags: ['Adventurous', 'Suspenseful'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Dune-Frank-Herbert/dp/0441013597',
     fullText: `Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for...`,
   },
   {
@@ -75,7 +75,7 @@ export const books: Book[] = [
     description: 'An irresistible interstellar adventure as only Andy Weir could deliver.',
     category: 'Fiction',
     moodTags: ['Adventurous', 'Funny', 'Suspenseful'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Project-Hail-Mary-Andy-Weir/dp/0593135202',
     fullText: `Ryland Grace is the sole survivor on a desperate, last-chance mission—and if he fails, humanity and the earth itself will perish. Except that right now, he doesn’t know that. He can’t even remember his own name, let alone the nature of his assignment or how to complete it. All he knows is that he’s been asleep for a very, very long time. And he’s just been awakened to find himself millions of miles from home, with nothing but two corpses for company.`,
   },
   {
@@ -87,7 +87,7 @@ export const books: Book[] = [
     description: 'A practical guide to personal freedom.',
     category: 'Self-Help',
     moodTags: ['Inspiring', 'Educational'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Four-Agreements-Practical-Personal-Freedom/dp/1878424319',
     fullText: `In The Four Agreements, bestselling author don Miguel Ruiz reveals the source of self-limiting beliefs that rob us of joy and create needless suffering. Based on ancient Toltec wisdom, The Four Agreements offer a powerful code of conduct that can rapidly transform our lives to a new experience of freedom, true happiness, and love.`,
   },
   {
@@ -99,7 +99,7 @@ export const books: Book[] = [
     description: 'A classic tribute to hope from the Holocaust.',
     category: 'Self-Help',
     moodTags: ['Inspiring', 'Sad', 'Educational'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X',
     fullText: `Psychiatrist Viktor Frankl's memoir has riveted generations of readers with its descriptions of life in Nazi death camps and its lessons for spiritual survival. Based on his own experience and the stories of his patients, Frankl argues that we cannot avoid suffering but we can choose how to cope with it, find meaning in it, and move forward with renewed purpose.`,
   },
   {
@@ -111,7 +111,7 @@ export const books: Book[] = [
     description: 'A groundbreaking tour of the mind and explains the two systems that drive the way we think.',
     category: 'Business',
     moodTags: ['Educational'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555',
     fullText: `Kahneman, a renowned psychologist and winner of the Nobel Prize in Economics, takes us on a groundbreaking tour of the mind and explains the two systems that drive the way we think. System 1 is fast, intuitive, and emotional; System 2 is slower, more deliberative, and more logical. The impact of overconfidence on corporate strategies, the difficulties of predicting what will make us happy in the future, the profound effect of cognitive biases on everything from playing the stock market to planning our next vacation—each of these can be understood only by knowing how the two systems shape our judgments and decisions.`,
   },
   {
@@ -123,7 +123,7 @@ export const books: Book[] = [
     description: 'An unforgettable memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University.',
     category: 'Self-Help',
     moodTags: ['Inspiring', 'Sad', 'Educational'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Educated-Memoir-Tara-Westover/dp/0399590501',
     fullText: `Born to survivalists in the mountains of Idaho, Tara Westover was seventeen the first time she set foot in a classroom. Her family was so isolated from mainstream society that there was no one to ensure the children received an education, and no one to intervene when one of Tara’s older brothers became violent. When another brother got himself into college, Tara decided to try a new kind of life. Her quest for knowledge transformed her, taking her over oceans and across continents, to Harvard and to Cambridge University. Only then would she wonder if she’d traveled too far, if there was still a way home.`,
   },
   {
@@ -135,7 +135,7 @@ export const books: Book[] = [
     description: 'A heartbreaking coming-of-age story, and a surprising tale of possible murder.',
     category: 'Fiction',
     moodTags: ['Sad', 'Suspenseful', 'Romantic'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.amazon.com/Where-Crawdads-Sing-Delia-Owens/dp/0735219095',
     fullText: `For years, rumors of the “Marsh Girl” have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say. Sensitive and intelligent, she has survived for years alone in the marsh that she calls home, finding friends in the gulls and lessons in the sand. Then the time comes when she yearns to be touched and loved. When two young men from town become intrigued by her wild beauty, Kya opens herself to a new life–until the unthinkable happens.`,
   },
   {
@@ -147,7 +147,7 @@ export const books: Book[] = [
     description: 'A story about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids.',
     category: 'Fiction',
     moodTags: ['Inspiring', 'Adventurous', 'Lighthearted'],
-    affiliateLink: '#',
+    affiliateLink: 'https://www.gutenberg.org/ebooks/12',
     fullText: `Paulo Coelho's enchanting novel has inspired a devoted following around the world. This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried in the Pyramids. Along the way he meets a Gypsy woman, a man who calls himself king, and an alchemist, all of whom point Santiago in the direction of his quest. No one knows what the treasure is, or if Santiago will be able to surmount the obstacles in his path. But what starts out as a journey to find worldly goods turns into a discovery of the treasure found within.`,
   },
 ];
