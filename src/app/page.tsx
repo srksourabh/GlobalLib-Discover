@@ -8,7 +8,7 @@ import {
   SidebarInset,
 } from '@/components/ui/sidebar';
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
   searchParams?: {
