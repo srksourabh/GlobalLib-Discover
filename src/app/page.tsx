@@ -1,3 +1,5 @@
+'use client';
+
 import { books } from '@/lib/data';
 import type { Book } from '@/lib/types';
 import { SearchFilters } from '@/components/search-filters';
@@ -7,19 +9,13 @@ import {
   SidebarContent,
   SidebarInset,
 } from '@/components/ui/sidebar';
+import { useSearchParams } from 'next/navigation';
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams?: {
-    search?: string;
-    category?: string;
-    mood?: string;
-  };
-}) {
-  const search = searchParams?.search?.toLowerCase() || '';
-  const category = searchParams?.category || '';
-  const mood = searchParams?.mood || '';
+export default function Home() {
+  const searchParams = useSearchParams();
+  const search = searchParams.get('search')?.toLowerCase() || '';
+  const category = searchParams.get('category') || '';
+  const mood = searchParams.get('mood') || '';
 
   const filteredBooks = books.filter((book) => {
     const titleMatch = book.title.toLowerCase().includes(search);
