@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { BookOpen, Home, Library, Settings, Smile, Upload } from 'lucide-react';
+import { BookOpen, Home, Library, Settings, Smile, Upload, ShieldCheck } from 'lucide-react';
 
 const menuItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -19,6 +19,7 @@ const menuItems = [
   { href: '/library', label: 'My Library', icon: Library },
   { href: '/upload', label: 'Upload', icon: Upload },
   { href: '/settings', label: 'Settings', icon: Settings },
+  { href: '/admin', label: 'Admin', icon: ShieldCheck },
 ];
 
 export function AppSidebar() {
