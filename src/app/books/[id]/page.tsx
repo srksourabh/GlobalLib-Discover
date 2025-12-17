@@ -1,18 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { books } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Play, Square, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
+import type { Book } from '@/lib/types';
+import { books } from '@/lib/data';
 
-export default function BookPage({ params }: { params: { id: string } }) {
+function BookClient({ book }: { book: Book }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-
-  const book = books.find((b) => b.id === params.id);
 
   useEffect(() => {
     // Cleanup speechSynthesis on component unmount
@@ -22,10 +21,6 @@ export default function BookPage({ params }: { params: { id: string } }) {
       }
     };
   }, []);
-
-  if (!book) {
-    notFound();
-  }
 
   const handleListen = () => {
     if (isSpeaking) {
@@ -125,4 +120,14 @@ export default function BookPage({ params }: { params: { id: string } }) {
       </div>
     </div>
   );
+}
+
+export default function BookPage({ params }: { params: { id: string } }) {
+  const book = books.find((b) => b.id === params.id);
+
+  if (!book) {
+    notFound();
+  }
+
+  return <BookClient book={book} />;
 }
