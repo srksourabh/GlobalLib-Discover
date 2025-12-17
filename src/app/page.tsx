@@ -10,13 +10,9 @@ import { useSearchParams } from 'next/navigation';
 export default function Home() {
   const searchParams = useSearchParams();
   const [filteredBooks, setFilteredBooks] = useState<Book[]>(books);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [moodTags, setMoodTags] = useState<string[]>([]);
 
-  useEffect(() => {
-    setCategories([...new Set(books.map((book) => book.category))]);
-    setMoodTags([...new Set(books.flatMap((book) => book.moodTags))]);
-  }, []);
+  const categories = [...new Set(books.map((book) => book.category))];
+  const moodTags = [...new Set(books.flatMap((book) => book.moodTags))];
 
   const search = searchParams.get('search')?.toLowerCase() || '';
   const category = searchParams.get('category') || '';
