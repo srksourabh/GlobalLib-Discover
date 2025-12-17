@@ -3,74 +3,74 @@
     {
       "id": "1",
       "description": "The Lean Startup book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1641154748135-8032a61a3f80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0307887898-L.jpg",
+      "imageHint": "The Lean Startup by Eric Ries book cover"
     },
     {
       "id": "2",
       "description": "Sapiens book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1633477189729-9290b3261d0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0062316095-L.jpg",
+      "imageHint": "Sapiens: A Brief History of Humankind by Yuval Noah Harari book cover"
     },
     {
       "id": "3",
       "description": "Atomic Habits book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0735211299-L.jpg",
+      "imageHint": "Atomic Habits by James Clear book cover"
     },
     {
       "id": "4",
       "description": "The Silent Patient book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1641154748135-8032a61a3f80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/1250301696-L.jpg",
+      "imageHint": "The Silent Patient by Alex Michaelides book cover"
     },
     {
       "id": "5",
       "description": "Dune book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0441013597-L.jpg",
+      "imageHint": "Dune by Frank Herbert book cover"
     },
     {
       "id": "6",
       "description": "Project Hail Mary book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0593135202-L.jpg",
+      "imageHint": "Project Hail Mary by Andy Weir book cover"
     },
     {
       "id": "7",
       "description": "The Four Agreements book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1641154748135-8032a61a3f80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/1878424319-L.jpg",
+      "imageHint": "The Four Agreements by Don Miguel Ruiz book cover"
     },
     {
       "id": "8",
       "description": "Man's Search for Meaning book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1521123845560-14093637aa7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Ym9vayUyMGNvdmVyfGVufDB8fHx8MTc2NTgyNDUwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/080701429X-L.jpg",
+      "imageHint": "Man's Search for Meaning by Viktor E. Frankl book cover"
     },
     {
       "id": "9",
       "description": "Thinking, Fast and Slow book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0374533555-L.jpg",
+      "imageHint": "Thinking, Fast and Slow by Daniel Kahneman book cover"
     },
     {
       "id": "10",
       "description": "Educated: A Memoir book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0399590501-L.jpg",
+      "imageHint": "Educated: A Memoir by Tara Westover book cover"
     },
     {
       "id": "11",
       "description": "Where the Crawdads Sing book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1528459105426-b9548367069b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0735219095-L.jpg",
+      "imageHint": "Where the Crawdads Sing by Delia Owens book cover"
     },
     {
       "id": "12",
       "description": "The Alchemist book cover",
-      "imageUrl": "https://images.unsplash.com/photo-1629992101753-56d196c8aabb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzY1ODI0NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "book cover"
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/0062315005-L.jpg",
+      "imageHint": "The Alchemist by Paulo Coelho book cover"
     }
   ]
 }
